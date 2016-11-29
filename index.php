@@ -19,12 +19,14 @@
             <a href="index.php">
                 <!--<h2>  ChiCosaFa 2.0 </h2>-->
                 <img class="logo" src="img/logo.svg">
+                <!-- 
                 <img class="casual_image" src="img/c1.svg" style="width: <?php echo random_int(2, 15); ?>%;">
                 <img class="casual_image" src="img/c2.svg" style="width: <?php echo random_int(2, 15); ?>%;"> 
                 <img class="casual_image" src="img/c3.svg" style="width: <?php echo random_int(2, 15); ?>%;">
                 <img class="casual_image" src="img/c4.svg" style="width: <?php echo random_int(2, 15); ?>%;">
                 <img class="casual_image" src="img/c5.svg" style="width: <?php echo random_int(2, 15); ?>%;"> 
                 <img class="casual_image" src="img/c6.svg" style="width: <?php echo random_int(2, 15); ?>%;">
+                -->
             </a> 
         </div>
 
