@@ -1,0 +1,26 @@
+ul {
+	z-index: 600;
+	padding: 0px;
+	margin: 0px;
+	position: fixed;
+	left: 0px;
+  	list-style-type: none;
+}
+
+ul li a{
+	font-family: 'Architects Daughter', cursive;
+	color: rgb(1,1,1);
+	font-weight: 900;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+ul li{
+	display: block;
+	width: 60px;
+	text-align: right;
+	padding: 15px; 
+	background: red;
+	margin-top: 20px;
+	box-shadow: 5px 5px 1px rgba(0, 0, 0, .3);
+}
