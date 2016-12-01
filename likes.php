@@ -1,7 +1,7 @@
 <?php include('parts/header.php'); 
       $page_id = 2;
         
-      $question = random_int(0, 5);
+      $question = rand(0, 5);
         if ($question == 0) {$question = "Chi?"; $url="insertChi.php";}
         elseif ($question == 1) {$question = "Cosa fa?"; $url="insertCosaFa.php";}
         elseif ($question == 2) {$question = "Quando?"; $url="insertQuando.php";}
@@ -41,30 +41,34 @@
                         displayRemoveFilter();
                     }
                     $result = mysqli_query($conn, $query);
-                    
+                    $index = 0;
                     $id = 0;
                     while ( $row = mysqli_fetch_array($result) ){
                         $id = $id +1;
                 ?>
                     <article id="story_<?php echo $id; ?>">
-                        <div class="story" style="background: <?php echo RandomColor(); ?>; padding-top:<?php echo random_int(1, 10)*5; ?>px;">
-                            <p style="font-size: <?php echo random_int(14, 20); ?>px;">
+                        <div class="story" style="background: <?php echo RandomColor(); ?>; padding-top:<?php echo rand(1, 10)*5; ?>px;">
+                            <p style="font-size: <?php echo rand(14, 20); ?>px;">
                                 <a href="index.php?fn=<?php echo $row['chi'] ?>"> <?php echo $row['chi'] ?> </a><br>  
                                 <?php echo $row['cosafa'] ?>   <br> 
                                 <?php echo $row['quando'] ?>   <br> 
                                 <?php echo $row['dove'] ?>   <br> 
                                 <?php echo $row['perche'] ?>  <br> 
                                 <?php echo $row['con'] ?> <br>  
-                            <p>
-                            <a class="like" href="insert/increaseLikes.php?l=<?php echo $row['likes'] ?>&i=<?php echo $row['id'] ?>"> <?php echo $row['likes'] ?> ▲</a>
-                            <a class="unlike" href="insert/decreaseLikes.php?l=<?php echo $row['likes'] ?>&i=<?php echo $row['id'] ?>"> ▾</a>
+                            </p>
+                            <div class="display-like">
+                                <p class='number-likes'> <?php echo $row['likes']?> </p>
+                                <a class="like <?php echo $index?>" id="<?php echo 'l='.$row['likes'].'&i='.$row['id']?>">▲</a>
+                                <a class="unlike <?php echo $index?>" id="<?php echo 'l='.$row['likes'].'&i='.$row['id']?>"> ▾</a>
+                            </div>
                         </div>
                     </article>
                 <?php
+                    $index +=1;
                     };
                 ?>
 
 
         </div>
 
-<?php include('footer.php');?>
+<?php include('parts/footer.php');?>

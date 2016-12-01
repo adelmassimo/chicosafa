@@ -1,7 +1,7 @@
 <?php include('parts/header.php'); 
       $page_id = 5;
 
-      $question = random_int(0, 5);
+      $question = rand(0, 5);
         if ($question == 0) {$question = "Chi?"; $url="insertChi.php";}
         elseif ($question == 1) {$question = "Cosa fa?"; $url="insertCosaFa.php";}
         elseif ($question == 2) {$question = "Quando?"; $url="insertQuando.php";}
@@ -19,12 +19,12 @@
             <a href="index.php">
                 <!--<h2>  ChiCosaFa 2.0 </h2>-->
                 <img class="logo" src="img/logo.svg">
-                <img class="casual_image" src="img/c1.svg" style="width: <?php echo random_int(2, 15); ?>%;">
-                <img class="casual_image" src="img/c2.svg" style="width: <?php echo random_int(2, 15); ?>%;"> 
-                <img class="casual_image" src="img/c3.svg" style="width: <?php echo random_int(2, 15); ?>%;">
-                <img class="casual_image" src="img/c4.svg" style="width: <?php echo random_int(2, 15); ?>%;">
-                <img class="casual_image" src="img/c5.svg" style="width: <?php echo random_int(2, 15); ?>%;"> 
-                <img class="casual_image" src="img/c6.svg" style="width: <?php echo random_int(2, 15); ?>%;">
+                <img class="casual_image" src="img/c1.svg" style="width: <?php echo rand(2, 15); ?>%;">
+                <img class="casual_image" src="img/c2.svg" style="width: <?php echo rand(2, 15); ?>%;">
+                <img class="casual_image" src="img/c3.svg" style="width: <?php echo rand(2, 15); ?>%;">
+                <img class="casual_image" src="img/c4.svg" style="width: <?php echo rand(2, 15); ?>%;">
+                <img class="casual_image" src="img/c5.svg" style="width: <?php echo rand(2, 15); ?>%;">
+                <img class="casual_image" src="img/c6.svg" style="width: <?php echo rand(2, 15); ?>%;">
             </a> 
         </div>
 
@@ -56,4 +56,4 @@
 
         </div>
 
-<?php include('footer.php');?>
+<?php include('parts/footer.php');?>

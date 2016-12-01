@@ -23,4 +23,4 @@
 
         </div>
 
-<?php include('footer.php');?>
+<?php include('parts/footer.php');?>

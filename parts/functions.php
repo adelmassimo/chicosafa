@@ -2,7 +2,7 @@
 	
 	function RandomColor(){
 		$result = "rgb(255, 209, 128)";
-		switch (random_int(0, 5)) {
+		switch (rand(0, 5)) {
 			case 0:
 				$result = "rgb(255, 255, 141)";
 				break;
@@ -32,7 +32,7 @@
 
 	function displayRemoveFilter(){
 		echo "<div id='rm_filters' style=>
-				<a href='index.php'> ✘ remove filters</a>
+				<a href='../index.php'> ✘ remove filters</a>
 			  </div>
 
 
