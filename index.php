@@ -19,12 +19,14 @@
             <a href="index.php">
                 <!--<h2>  ChiCosaFa 2.0 </h2>-->
                 <img class="logo" src="img/logo.svg">
+                <!--
                 <img class="casual_image" src="img/c1.svg" style="width: <?php echo rand(2, 15); ?>%;">
                 <img class="casual_image" src="img/c2.svg" style="width: <?php echo rand(2, 15); ?>%;">
                 <img class="casual_image" src="img/c3.svg" style="width: <?php echo rand(2, 15); ?>%;">
                 <img class="casual_image" src="img/c4.svg" style="width: <?php echo rand(2, 15); ?>%;">
                 <img class="casual_image" src="img/c5.svg" style="width: <?php echo rand(2, 15); ?>%;">
                 <img class="casual_image" src="img/c6.svg" style="width: <?php echo rand(2, 15); ?>%;">
+                -->
             </a> 
         </div>
 
@@ -46,7 +48,7 @@
 
                 <?php
                     if($filterName == null)
-                        $query = "SELECT * FROM stories";
+                        $query = "SELECT * FROM stories ORDER BY id DESC";
                     else{
                         $query = "SELECT * FROM stories WHERE chi='".$filterName."';";
                         displayRemoveFilter();
@@ -76,8 +78,8 @@
                             </p>
                             <div class="display-like"> 
                                 <p class='number-likes'> <?php echo $row['likes']?> </p>
-                                <a class="like <?php echo $index?>" id="<?php echo 'l='.$row['likes'].'&i='.$row['id']?>">▲</a>
-                                <a class="unlike <?php echo $index?>" id="<?php echo 'l='.$row['likes'].'&i='.$row['id']?>"> ▾</a>
+                                <a class="like <?php echo $index?>" id="<?php echo 'l='.$row['likes'].'&i='.$row['id']?>" likes="<?php echo $row['likes']?>">▲</a>
+                                <a class="unlike <?php echo $index?>" id="<?php echo 'l='.$row['likes'].'&i='.$row['id']?>" likes="<?php echo $row['likes']?>"> ▾</a>
                             </div>
                         </div>
                     </article>

@@ -1,0 +1,318 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.10
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost:8889
+-- Creato il: Nov 24, 2016 alle 12:41
+-- Versione del server: 5.5.42
+-- Versione PHP: 7.0.0
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `chicosafa`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `chi`
+--
+
+CREATE TABLE `chi` (
+  `id` int(11) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `author` varchar(255) NOT NULL,
+  `likes` int(11) NOT NULL DEFAULT '0',
+  `tag` varchar(255) NOT NULL DEFAULT 'none'
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `chi`
+--
+
+INSERT INTO `chi` (`id`, `content`, `author`, `likes`, `tag`) VALUES
+(1, 'Berlusconi', '::1', 3, 'none'),
+(2, 'tony Cairoli', '::1', -1, 'Motocoss'),
+(3, 'Luigi Verdiani', '::1', 0, 'unifi'),
+(4, 'Leonardo Bernice Casini', '::1', 0, 'none'),
+(5, 'Gabbo Barlacchi', '::1', 2, 'tristezza'),
+(6, 'Bergoglio', '::1', -2, 'none'),
+(7, 'rama', '::1', 0, 'none'),
+(8, 'cancaro', '::1', 0, 'none'),
+(9, 'papa francesco', '::1', 0, 'none'),
+(10, 'il resti', '::1', 0, 'none'),
+(11, 'la tu mamma', '::1', 0, 'none'),
+(12, 'brescia', '::1', 0, 'none'),
+(13, 'marko the slave', '::1', 0, 'none'),
+(14, 'Il menchetti', '::1', 0, 'palandran');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `con`
+--
+
+CREATE TABLE `con` (
+  `id` int(11) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `author` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `con`
+--
+
+INSERT INTO `con` (`id`, `content`, `author`) VALUES
+(1, 'con Magalli', '::1'),
+(2, 'con antonino cannavacciuolo', '::1'),
+(3, 'con il rama che fa i siti merdosi', '::1'),
+(4, 'con king kong', '::1'),
+(5, 'con cala', '::1'),
+(6, 'con barakcchu', '::1'),
+(7, 'con giuseppe meazza', '::1'),
+(8, 'Con antonio Antony', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `cosafa`
+--
+
+CREATE TABLE `cosafa` (
+  `id` int(11) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `author` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `cosafa`
+--
+
+INSERT INTO `cosafa` (`id`, `content`, `author`) VALUES
+(1, 'sbuccia le banane insieme a Gogeta SSJ4', '::1'),
+(2, 'Assorbe gli urti dovuti alle botte', '::1'),
+(3, 'urla contro le persone', '::1'),
+(4, 'gioca a jumanji', '::1'),
+(5, 'va in eggitto', '::1'),
+(6, 'prega la madonna', '::1'),
+(7, 'suchhia il latte di scimmia', '::1'),
+(8, 'fa le vasche in piscina dove ci sono gli squali', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `dove`
+--
+
+CREATE TABLE `dove` (
+  `id` int(11) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `author` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `dove`
+--
+
+INSERT INTO `dove` (`id`, `content`, `author`) VALUES
+(1, 'In angola', '::1'),
+(2, 'Alle paraolimpiadi', '::1'),
+(3, 'verso singapore', '::1'),
+(4, '', '::1'),
+(5, 'quando vuoi', '::1'),
+(6, 'cazzo', '::1'),
+(7, 'a timisoara', '::1'),
+(8, 'a novara', '::1'),
+(9, 'a anghiari', '::1'),
+(10, 'a frasassi', '::1'),
+(11, 'a casa del rama', '::1'),
+(12, 'a casa della tu mamma', '::1'),
+(13, 'in strda', '::1'),
+(14, 'a pescia', '::1'),
+(15, 'in uganda', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `perche`
+--
+
+CREATE TABLE `perche` (
+  `id` int(11) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `author` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `perche`
+--
+
+INSERT INTO `perche` (`id`, `content`, `author`) VALUES
+(1, 'perchÃ¨ gli andava cosÃ¬', '::1'),
+(2, 'perchÃ¨ non riusciva piÃ  a respirare', '::1'),
+(3, 'perchÃ¨ era stanco di bestemmiare', '::1'),
+(4, 'perchÃ¨ si sentiva male', '::1'),
+(5, 'perchÃ¨ voleva farla finita', '::1'),
+(6, 'perchÃ¨ ', '::1'),
+(7, 'perchÃ¨ andava affanculo', '::1'),
+(8, 'Perch+ iddio Ã¨ boia', '::1'),
+(9, 'perchÃ¨ i bunchia Ã¨ gay', '::1'),
+(10, 'perchÃ¨ ha le adenoidi', '::1'),
+(11, 'perchÃ¨ il barla Ã¨ frogio', '::1'),
+(12, 'perchÃ¨ salta la corda e si sente male', '::1'),
+(13, 'perchÃ¨ mi brucia il culo ', '::1'),
+(14, 'perchÃ¨ Ã¨ puttana', '::1'),
+(15, 'perchÃ¨ xnxx', '::1'),
+(16, 'perchÃ¨ aveva fame', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `quando`
+--
+
+CREATE TABLE `quando` (
+  `id` int(11) NOT NULL,
+  `content` varchar(255) NOT NULL,
+  `author` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `quando`
+--
+
+INSERT INTO `quando` (`id`, `content`, `author`) VALUES
+(1, 'qunado gli prese bene', '::1'),
+(2, 'in un momento di crisi', '::1'),
+(3, 'sempre', '::1'),
+(4, 'quando piÃ  gli aggrada', '::1'),
+(5, 'dopodomani', '::1'),
+(6, '', '::1'),
+(7, 'ieri', '::1'),
+(8, '', '::1'),
+(9, 'nella notte dei cortelli', '::1'),
+(10, 'in un determinato istante temporale', '::1'),
+(11, '13 aprile 1987', '::1'),
+(12, 'ieri', '::1'),
+(13, 'molto spesso', '::1'),
+(14, 'Oggi', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `storieLikes`
+--
+
+CREATE TABLE `storieLikes` (
+  `storia` int(11) NOT NULL,
+  `likes` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Struttura stand-in per le viste `stories`
+--
+CREATE TABLE `stories` (
+`tag` varchar(255)
+,`likes` int(11)
+,`id` int(11)
+,`chi` varchar(255)
+,`cosafa` varchar(255)
+,`quando` varchar(255)
+,`dove` varchar(255)
+,`perche` varchar(255)
+,`con` varchar(255)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura per la vista `stories`
+--
+DROP TABLE IF EXISTS `stories`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `stories` AS select `chi`.`tag` AS `tag`,`chi`.`likes` AS `likes`,`chi`.`id` AS `id`,`chi`.`content` AS `chi`,`cosafa`.`content` AS `cosafa`,`quando`.`content` AS `quando`,`dove`.`content` AS `dove`,`perche`.`content` AS `perche`,`con`.`content` AS `con` from (((((`chi` join `cosafa`) join `quando`) join `dove`) join `perche`) join `con`) where ((`chi`.`id` = `cosafa`.`id`) and (`cosafa`.`id` = `quando`.`id`) and (`quando`.`id` = `dove`.`id`) and (`dove`.`id` = `perche`.`id`) and (`perche`.`id` = `con`.`id`));
+
+--
+-- Indici per le tabelle scaricate
+--
+
+--
+-- Indici per le tabelle `chi`
+--
+ALTER TABLE `chi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `con`
+--
+ALTER TABLE `con`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `cosafa`
+--
+ALTER TABLE `cosafa`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `dove`
+--
+ALTER TABLE `dove`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `perche`
+--
+ALTER TABLE `perche`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `quando`
+--
+ALTER TABLE `quando`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `storieLikes`
+--
+ALTER TABLE `storieLikes`
+  ADD PRIMARY KEY (`storia`);
+
+--
+-- AUTO_INCREMENT per le tabelle scaricate
+--
+
+--
+-- AUTO_INCREMENT per la tabella `chi`
+--
+ALTER TABLE `chi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+--
+-- AUTO_INCREMENT per la tabella `con`
+--
+ALTER TABLE `con`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT per la tabella `cosafa`
+--
+ALTER TABLE `cosafa`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT per la tabella `dove`
+--
+ALTER TABLE `dove`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT per la tabella `perche`
+--
+ALTER TABLE `perche`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
+--
+-- AUTO_INCREMENT per la tabella `quando`
+--
+ALTER TABLE `quando`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
