@@ -32,7 +32,7 @@
 
 	function displayRemoveFilter(){
 		echo "<div id='rm_filters' style=>
-				<a href='../index.php'> ✘ remove filters</a>
+				<a href='index.php'> ✘ remove filters</a>
 			  </div>
 		";
 	}
